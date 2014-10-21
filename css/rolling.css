@@ -1,0 +1,29 @@
+/*
+       _     _     _           _ 
+ _____|_|___|_|___| |_ ___ ___|_|
+|     | |   | |_ -|  _| . |  _| |
+|_|_|_|_|_|_|_|___|_| |___|_| |_|
+
+
+ */
+
+/* stage style */
+.full_width_stage{width:500px; position:relative; overflow:hidden;}
+.full_width_stage .contents_whole_container{height:600px;}
+
+/* contentsv style */
+.full_width_stage .contents{position:absolute; top:0; left:0; width:100%; height:600px;}
+.full_width_stage .contents .images{width:100%; height:100%;}
+.full_width_stage .contents img{width:100%; height:100%;}
+.full_width_stage .contents .text{position:absolute; top:0; left:0;}
+
+/* control */
+.full_width_stage .arrow>div{position:absolute; top:50%; cursor:pointer;}
+.full_width_stage .arrow>.prev{left:0;}
+.full_width_stage .arrow>.next{right:0;}
+
+.full_width_stage .bullet_container{position:absolute; bottom:0; left:50%;}
+.full_width_stage .bullet_container>div{float:left; cursor:pointer;}
+
+.full_width_stage .timer_bar{position:absolute; width:100%; height:5px; bottom:0; background:#000; text-indent:-99999em;}
+
