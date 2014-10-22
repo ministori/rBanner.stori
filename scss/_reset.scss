@@ -1,5 +1,5 @@
 /* ===========================================================================================
- *	 http://meyerweb.com/eric/tools/css/reset/ 
+ *   http://meyerweb.com/eric/tools/css/reset/ 
  *  v2.0 | 20110126
  *  License: none (public domain)
  *  Reset Css
@@ -18,50 +18,50 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 html {
-	overflow-y:scroll;
+  overflow-y:scroll;
 }
 body {
-	font-family: 'RixSGo L', sans-serif; font-size:13px; font-weight:300; color:#777;
-	line-height: 1; letter-spacing:-0.25px;
+  font-family: 'RixSGo L', sans-serif; font-size:13px; font-weight:300; color:#777;
+  line-height: 1; letter-spacing:-0.25px;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Custom Adding Css Code */
 a {
-	font-family: 'RixSGo L', sans-serif; font-size:13px; font-weight:300; color:#777;
-	text-decoration: none;
+  font-family: 'RixSGo L', sans-serif; font-size:13px; font-weight:300; color:#777;
+  text-decoration: none;
 }
 a:active{background:transparent;}
 input {
-	margin:0;
-	padding:0;
-	font-family: 'RixSGo L', sans-serif; font-size:13px; font-weight:300; color:#777;
+  margin:0;
+  padding:0;
+  font-family: 'RixSGo L', sans-serif; font-size:13px; font-weight:300; color:#777;
 }
 input[type=text],
 input[type=password] {height:32px;line-height:32px; border:1px solid #d3d0cf;}
 input[type=submit], input[type=image], button{
-	cursor: pointer;
-	border:0;
+  cursor: pointer;
+  border:0;
 }
 select{font-family: 'RixSGo L', sans-serif; font-size:13px; font-weight:300; color:#777;}
 input,

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>rBanner.stori</title>
+<link rel="stylesheet" href="css/rBanner.stori.css" />
+<script src="js/lib/jquery-1.11.1.min.js"></script>
+<script src="js/rBanner.stori.js"></script>
+</head>
+
+<body>
+<div class="rBanner_stage">
+	
+	<div class="container">
+		<div>
+			<img src="images/bg.jpg" />
+			<div>Rolling PlugIn Class</div>
+		</div>
+		<div>
+			<img src="images/bg1.jpg" />
+			<div>Rolling PlugIn Class</div>
+		</div>
+		<div>
+			<img src="images/bg2.jpg" />
+			<div>Rolling PlugIn Class</div>
+		</div>
+	</div>
+	
+	
+	
+</div>
+
+<script>
+	$(function(){
+		$('.rBanner_stage').rBannerStori({
+			direction : true,
+			page : true,
+			timer : true
+		});
+	});
+</script>
+</body>
+</html>
