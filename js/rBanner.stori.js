@@ -30,7 +30,9 @@
 		constructor : rBannerStori,
 		
 		initClass : function($rBannerItem){
-			$rBannerItem.addClass('contents');
+			$rBannerItem.parent().parent().addClass('rbs_stage');
+			$rBannerItem.parent().addClass('rbs_container');
+			$rBannerItem.addClass('rbs_contents');
 		},
 		
 		initSequence : function($rBannerItem){
@@ -54,8 +56,8 @@
 		},
 		
 		initDirection : function($rBannerItem){
-			var $stage = $rBannerItem.parents('.rBanner_stage');
-			var $direction = '<div class="direction">';
+			var $stage = $rBannerItem.parents('.rbs_stage');
+			var $direction = '<div class="rbs_direction">';
 			$direction 	 += '  <div class="prev">prev</div>';
 			$direction 	 += '  <div class="next">next</div>';
 			$direction 	 += '</div>';
@@ -68,21 +70,21 @@
 		},
 		
 		initPage : function($rBannerItem){
-			var $stage = $rBannerItem.parents('.rBanner_stage');
+			var $stage = $rBannerItem.parents('.rbs_stage');
 			var bannerSize = this.bannerSize;
-			var $pageContainer = '<div class="page_container"></div>';
+			var $pageContainer = '<div class="rbs_page_container"></div>';
 			$stage.append($pageContainer);
 			for(var i=0;i<bannerSize;i++){
 				var $pager = '<div class="pager">' + i + '</div>';
-				$('.page_container').append($pager);
+				$('.rbs_page_container').append($pager);
 			}
 			$('.pager').eq(0).addClass('current');
 			return true;
 		},
 		
 		initTimer : function($rBannerItem){
-			var $stage = $rBannerItem.parents('.rBanner_stage');
-			var $timerBar = '<div class="timer_bar">timer bar</div>';
+			var $stage = $rBannerItem.parents('.rbs_stage');
+			var $timerBar = '<div class="rbs_timer_bar">timer bar</div>';
 			$stage.append($timerBar);
 			return true;
 		}
@@ -128,6 +130,9 @@ $.fn.rBannerStori = function(options){
 	// class object
 	var rB;
 	
+	// this object
+	var $target = $(this);
+	
 	// default option
 	var option = {
 		direction : false,
@@ -140,7 +145,7 @@ $.fn.rBannerStori = function(options){
 	
 	$(window).on('load', function(){
 		
-		$rBannerItem = $('.rBanner_stage>.container>div');
+		$rBannerItem = $target.children().children();
 		rB = new rBannerStori($rBannerItem);
 		
 		rB.init($rBannerItem);

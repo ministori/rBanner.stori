@@ -13,14 +13,14 @@ $full_width:100%;
 @import "reset";
 
 // stage style
-.rBanner_stage{
+.rbs_stage{
   width:$full_width; position:relative; /*overflow:hidden;*/ left:0; margin-left:0;
   
-  .container{
+  .rbs_container{
     height:600px; position:relative;
     
     // contents style
-   .contents{
+   .rbs_contents{
      position:absolute; top:0; left:0; width:$full_width; height:600px;
      
      img{
@@ -33,7 +33,7 @@ $full_width:100%;
    }
   }
   
-  .direction{
+  .rbs_direction{
     
     >div{
       position:absolute; top:$full_width/2; cursor:pointer;
@@ -44,13 +44,13 @@ $full_width:100%;
     
   }
   
-  .page_container{
+  .rbs_page_container{
     position:absolute; bottom:0; left:$full_width/2;
     
     >.pager{float:left; cursor:pointer;}
   }
   
-  .timer_bar{
+  .rbs_timer_bar{
     position:absolute; width:$full_width; height:5px; bottom:0; background:#000; text-indent:-99999em;
   }
  
