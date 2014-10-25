@@ -42,16 +42,18 @@ strong, h1 { color: #231f20; font-weight: bold; }
 
 table { width: 100%; }
 
-.rbs_stage { width: 100%; position: relative; /*overflow:hidden;*/ left: 0; margin-left: 0; }
-.rbs_stage .rbs_container { height: 600px; position: relative; }
-.rbs_stage .rbs_container .rbs_contents { position: absolute; top: 0; left: 0; width: 100%; height: 600px; }
-.rbs_stage .rbs_container .rbs_contents img { width: 100%; height: 100%; }
-.rbs_stage .rbs_container .rbs_contents div { position: absolute; top: 0; left: 0; }
-.rbs_stage .rbs_direction > div { position: absolute; top: 50%; cursor: pointer; }
-.rbs_stage .rbs_direction > div.prev { left: 0; }
-.rbs_stage .rbs_direction > div.next { right: 0; }
-.rbs_stage .rbs_page_container { position: absolute; bottom: 0; left: 50%; }
-.rbs_stage .rbs_page_container > .pager { float: left; cursor: pointer; }
-.rbs_stage .rbs_timer_bar { position: absolute; width: 100%; height: 5px; bottom: 0; background: #000; text-indent: -99999em; }
+.rbs-stage { width: 100%; position: relative; overflow: hidden; left: 0; margin-left: 0; }
+.rbs-stage .rbs-container { height: 600px; position: relative; }
+.rbs-stage .rbs-container .rbs-contents { position: absolute; top: 0; left: 0; width: 100%; height: 600px; }
+.rbs-stage .rbs-container .rbs-contents img { width: 100%; height: 100%; }
+.rbs-stage .rbs-container .rbs-contents div { position: absolute; top: 0; left: 0; }
+.rbs-stage .rbs-direction > div { position: absolute; top: 50%; cursor: pointer; }
+.rbs-stage .rbs-direction > div.prev { left: 0; }
+.rbs-stage .rbs-direction > div.next { right: 0; }
+.rbs-stage .rbs-play-stop { position: absolute; bottom: 0; left: 50%; margin-left: 50px; }
+.rbs-stage .rbs-play-stop > div { float: left; margin-right: 10px; cursor: pointer; }
+.rbs-stage .rbs-page-container { position: absolute; bottom: 0; left: 50%; }
+.rbs-stage .rbs-page-container > .pager { float: left; cursor: pointer; }
+.rbs-stage .rbs-timer-bar { position: absolute; width: 100%; height: 5px; bottom: 0; background: #000; text-indent: -99999em; }
 
 /*# sourceMappingURL=rBanner.stori.css.map */

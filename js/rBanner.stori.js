@@ -30,9 +30,9 @@
 		constructor : rBannerStori,
 		
 		initClass : function($rBannerItem){
-			$rBannerItem.parent().parent().addClass('rbs_stage');
-			$rBannerItem.parent().addClass('rbs_container');
-			$rBannerItem.addClass('rbs_contents');
+			$rBannerItem.parent().parent().addClass('rbs-stage');
+			$rBannerItem.parent().addClass('rbs-container');
+			$rBannerItem.addClass('rbs-contents');
 		},
 		
 		initSequence : function($rBannerItem){
@@ -56,8 +56,8 @@
 		},
 		
 		initDirection : function($rBannerItem){
-			var $stage = $rBannerItem.parents('.rbs_stage');
-			var $direction = '<div class="rbs_direction">';
+			var $stage = $rBannerItem.parents('.rbs-stage');
+			var $direction = '<div class="rbs-direction">';
 			$direction 	 += '  <div class="prev">prev</div>';
 			$direction 	 += '  <div class="next">next</div>';
 			$direction 	 += '</div>';
@@ -65,26 +65,42 @@
 			return true;
 		},
 		
-		initPlayStop : function($rBannerItem){
+		initPlayStop : function($rBannerItem, type){
+			var $stage = $rBannerItem.parents('.rbs-stage');
+			var $wrap = '<div class="rbs-play-stop"></div>';
+			var $play = '<div class="play">play</div>';
+			var $stop = '<div class="stop">stop</div>';
+			switch(type){
+				case 'both': {
+					$stage.append($wrap);
+					$('.rbs-play-stop').append($play).append($stop);
+					break;
+				}
+				case 'toggle': {
+					$stage.append($wrap);
+					$('.rbs-play-stop').append($stop);
+					break;
+				}
+			}
 			
 		},
 		
 		initPage : function($rBannerItem){
-			var $stage = $rBannerItem.parents('.rbs_stage');
+			var $stage = $rBannerItem.parents('.rbs-stage');
 			var bannerSize = this.bannerSize;
-			var $pageContainer = '<div class="rbs_page_container"></div>';
+			var $pageContainer = '<div class="rbs-page-container"></div>';
 			$stage.append($pageContainer);
 			for(var i=0;i<bannerSize;i++){
 				var $pager = '<div class="pager">' + i + '</div>';
-				$('.rbs_page_container').append($pager);
+				$('.rbs-page-container').append($pager);
 			}
 			$('.pager').eq(0).addClass('current');
 			return true;
 		},
 		
 		initTimer : function($rBannerItem){
-			var $stage = $rBannerItem.parents('.rbs_stage');
-			var $timerBar = '<div class="rbs_timer_bar">timer bar</div>';
+			var $stage = $rBannerItem.parents('.rbs-stage');
+			var $timerBar = '<div class="rbs-timer-bar">timer bar</div>';
 			$stage.append($timerBar);
 			return true;
 		}
@@ -135,9 +151,10 @@ $.fn.rBannerStori = function(options){
 	
 	// default option
 	var option = {
-		direction : false,
-		page : false,
-		timer : false
+		direction : false, // prev, next
+		playStop : false, // play, stop
+		page : false, // page
+		timer : false // timer bar
 	};
 	
 	// option merge - options 매개변수로 넘어오는 값을 option에 덮어씀
@@ -145,16 +162,21 @@ $.fn.rBannerStori = function(options){
 	
 	$(window).on('load', function(){
 		
-		$rBannerItem = $target.children().children();
+		$rBannerItem = $target.children(':first-child').children();
 		rB = new rBannerStori($rBannerItem);
 		
+		//초기화
 		rB.init($rBannerItem);
 		
+		// 각 옵션값에 따른 초기화
 		var isDirection = option.direction ? rB.initDirection($rBannerItem) : false;
+		
+		var isPlayStop = option.playStop ? rB.initPlayStop($rBannerItem, option.playStop) : false;
 		
 		var isPage = option.page ? rB.initPage($rBannerItem) : false;
 		
 		var isTimer = option.timer ? rB.initTimer($rBannerItem) : false;
+		
 		
 	});
 	

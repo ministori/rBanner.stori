@@ -8,23 +8,23 @@
  */
 
 // variable
-$full_width:100%;
+$full-width:100%;
 
 @import "reset";
 
 // stage style
-.rbs_stage{
-  width:$full_width; position:relative; /*overflow:hidden;*/ left:0; margin-left:0;
+.rbs-stage{
+  width:$full-width; position:relative; overflow:hidden; left:0; margin-left:0;
   
-  .rbs_container{
+  .rbs-container{
     height:600px; position:relative;
     
     // contents style
-   .rbs_contents{
-     position:absolute; top:0; left:0; width:$full_width; height:600px;
+   .rbs-contents{
+     position:absolute; top:0; left:0; width:$full-width; height:600px;
      
      img{
-       width:$full_width; height:$full_width;
+       width:$full-width; height:$full-width;
      }
      
      div{
@@ -33,10 +33,10 @@ $full_width:100%;
    }
   }
   
-  .rbs_direction{
+  .rbs-direction{
     
     >div{
-      position:absolute; top:$full_width/2; cursor:pointer;
+      position:absolute; top:$full-width/2; cursor:pointer;
       
       &.prev{left:0;}
       &.next{right:0;}
@@ -44,14 +44,22 @@ $full_width:100%;
     
   }
   
-  .rbs_page_container{
-    position:absolute; bottom:0; left:$full_width/2;
+  .rbs-play-stop{
+    position:absolute; bottom:0; left:$full-width/2; margin-left:50px;
+    
+    >div{
+      float:left; margin-right:10px; cursor:pointer;
+    }
+  }
+  
+  .rbs-page-container{
+    position:absolute; bottom:0; left:$full-width/2;
     
     >.pager{float:left; cursor:pointer;}
   }
   
-  .rbs_timer_bar{
-    position:absolute; width:$full_width; height:5px; bottom:0; background:#000; text-indent:-99999em;
+  .rbs-timer-bar{
+    position:absolute; width:$full-width; height:5px; bottom:0; background:#000; text-indent:-99999em;
   }
  
 }
