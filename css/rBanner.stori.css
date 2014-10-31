@@ -42,9 +42,11 @@ strong, h1 { color: #231f20; font-weight: bold; }
 
 table { width: 100%; }
 
-.rbs-stage { width: 100%; position: relative; overflow: hidden; left: 0; margin-left: 0; }
-.rbs-stage .rbs-container { height: 600px; position: relative; }
-.rbs-stage .rbs-container .rbs-contents { position: absolute; top: 0; left: 0; width: 100%; height: 600px; }
+.rbs-wrap { overflow: hidden; }
+
+.rbs-stage { width: 100%; position: relative; overflow: hidden; margin: 0 auto; }
+.rbs-stage .rbs-container { position: relative; height: 100%; }
+.rbs-stage .rbs-container .rbs-contents { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .rbs-stage .rbs-container .rbs-contents img { width: 100%; height: 100%; }
 .rbs-stage .rbs-container .rbs-contents div { position: absolute; top: 0; left: 0; }
 .rbs-stage .rbs-direction > div { position: absolute; top: 50%; cursor: pointer; }
